@@ -149,3 +149,7 @@ export PATH="$HOME/zig-linux-x86_64-0.12.0:$PATH"
 
 # go
 export PATH="$HOME/usr/local/go:$PATH"
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
