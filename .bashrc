@@ -143,4 +143,9 @@ export PATH="/home/lfrf/nvim-linux64/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# zig
 export PATH="$HOME/zig-linux-x86_64-0.12.0:$PATH"
+
+# go
+export PATH="$HOME/usr/local/go:$PATH"
