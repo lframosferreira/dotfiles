@@ -21,6 +21,9 @@ return {
 					"zls",
 					"texlab",
 					"hydra_lsp",
+					"bashls",
+					"pyright",
+					"jsonls",
 				},
 			})
 		end,
@@ -33,9 +36,7 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
-			})
-			lspconfig.tsserver.setup({
-				capabilities = capabilities,
+				settings = { Lua = { hint = { enable = true } } },
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
@@ -47,6 +48,12 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.texlab.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.bashls.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
