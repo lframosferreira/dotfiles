@@ -1,0 +1,7 @@
+[user]
+	email = lframos_ferreira@outlook.com
+	name = Luís Felipe Ramos Ferreira
+[init]
+	defaultBranch = main
+[core]
+	quotepath = off
