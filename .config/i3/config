@@ -187,3 +187,5 @@ bar {
 
 exec_always --no-startup-id /usr/bin/feh --bg-scale '/usr/share/backgrounds/linuxmint/default_background.jpg' 
 exec --no-startup-id compton
+
+exec "setxkbmap -layout bt"
