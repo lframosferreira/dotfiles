@@ -1,3 +1,6 @@
+[env]
+TERM = "xterm256-color"
+
 [window]
 padding.x = 10
 padding.y = 10
@@ -9,4 +12,5 @@ blur = true
 option_as_alt = "Both"
 
 [font]
+normal.family = "JetBrainsMonoNerdFont"
 size = 12
