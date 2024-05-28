@@ -2,12 +2,22 @@
 padding.x = 10
 padding.y = 10
 
-opacity = 0.8
+opacity = 0.7
 
 blur = true
 
 option_as_alt = "Both"
 
 [font]
+
 normal.family = "JetBrainsMonoNerdFont"
 size = 12
+
+[colors]
+
+primary.background = "#000000"
+
+[selection]
+
+save_to_clipboard = true
+
