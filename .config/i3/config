@@ -185,7 +185,7 @@ bar {
         status_command i3status
 }
 
-exec_always --no-startup-id /usr/bin/feh --bg-scale '/usr/share/backgrounds/linuxmint/default_background.jpg' 
+exec_always --no-startup-id /usr/bin/feh --bg-scale '/usr/share/background/pokemon.jpg' 
 exec --no-startup-id compton
 
 exec "setxkbmap -layout br"
