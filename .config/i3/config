@@ -185,11 +185,11 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-exec_always --no-startup-id /usr/bin/feh --bg-scale '/usr/share/background/pokemon.jpg' 
 exec --no-startup-id compton
 
 # mostly shit from typecraft config video
 exec --no-startup-id picom
 exec_always killall polybar
 exec_always --no-startup-id /home/lfrf/dotfiles/.config/polybar/launch_polybar.sh
+exec_always feh --bg-scale ~/backgrounds/pokemon.jpg
 exec "setxkbmap -layout br"
