@@ -16,4 +16,10 @@ require("keymaps")
 require("lazy").setup("plugins")
 
 -- opacity added on buf enter. There might be a more elegant solution
-vim.api.nvim_create_autocmd("BufEnter", { command = "highlight Normal guibg=none" })
+vim.opt.termguicolors = true
+vim.cmd([[
+  highlight Normal guibg=NONE ctermbg=NONE
+  highlight NonText guibg=NONE ctermbg=NONE
+  highlight NeoTreeNormal guibg=NONE ctermbg=NONE
+  highlight NeoTreeNormalNC guibg=NONE ctermbg=NONE
+]])
