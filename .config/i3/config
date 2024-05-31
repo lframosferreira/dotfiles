@@ -232,3 +232,14 @@ client.unfocused         $overlay0 $base  $text    $rosewater $overlay0
 client.urgent            $peach    $base  $peach   $overlay0  $peach
 client.placeholder       $overlay0 $base  $text    $overlay0  $overlay0
 client.background        $base
+
+# scrot
+# Fullscreen screenshot
+bindsym $mod+Shift+s exec --no-startup-id scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
+
+# Focused window screenshot
+bindsym $mod+Shift+w exec --no-startup-id scrot -u ~/Pictures/%Y-%m-%d-%T-window.png
+
+# Select area screenshot
+bindsym $mod+Shift+a exec --no-startup-id scrot -s ~/Pictures/%Y-%m-%d-%T-area.png
+
