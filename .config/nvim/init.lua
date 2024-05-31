@@ -14,3 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("options")
 require("keymaps")
 require("lazy").setup("plugins")
+
+-- opacity added on buf enter. There might be a more elegant solution
+vim.api.nvim_create_autocmd("BufEnter", { command = "highlight Normal guibg=none" })
