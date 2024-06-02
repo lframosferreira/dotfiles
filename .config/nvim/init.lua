@@ -15,7 +15,7 @@ require("options")
 require("keymaps")
 require("lazy").setup("plugins")
 
--- opacity added on buf enter. There might be a more elegant solution
+-- transparency added on buf enter. There might be a more elegant solution
 vim.opt.termguicolors = true
 vim.cmd([[
   highlight Normal guibg=NONE ctermbg=NONE
@@ -23,3 +23,6 @@ vim.cmd([[
   highlight NeoTreeNormal guibg=NONE ctermbg=NONE
   highlight NeoTreeNormalNC guibg=NONE ctermbg=NONE
 ]])
+
+-- lazy and mason windows transparency
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
