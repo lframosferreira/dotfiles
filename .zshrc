@@ -144,3 +144,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # use neovim everytime
 alias vim="nvim"
 alias vimdiff="nvim -d"
+
+# bun completions
+[ -s "/home/lfrf/.bun/_bun" ] && source "/home/lfrf/.bun/_bun"
