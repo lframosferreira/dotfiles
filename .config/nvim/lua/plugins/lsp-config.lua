@@ -38,32 +38,52 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+			capabilities.textDocument.foldingRange = {
+				dynamicRegistration = false,
+				lineFoldingOnly = true,
+			}
+
 			local lspconfig = require("lspconfig")
+			-- lua
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 				settings = { Lua = { hint = { enable = true } } },
 			})
+
+			-- typescript
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 			})
+
+			-- yaml
 			lspconfig.yamlls.setup({
 				capabilities = capabilities,
 			})
+
+			-- rust
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.ruff.setup({
 				capabilities = capabilities,
 			})
+
+			-- python
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
+
+			-- latex
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
 			})
+
+			-- json
 			lspconfig.jsonls.setup({
 				capabilities = capabilities,
 			})
+
+			-- c/c++
 			lspconfig.clangd.setup({
 				cmd = { "clangd", "--completion-style=detailed" },
 				capabilities = capabilities,
@@ -71,6 +91,8 @@ return {
 					vim.keymap.set("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<CR>", { buffer = bufnr })
 				end,
 			})
+
+			-- bash
 			lspconfig.bashls.setup({
 				capabilities = capabilities,
 			})

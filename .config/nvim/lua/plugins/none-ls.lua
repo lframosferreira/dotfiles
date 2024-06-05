@@ -5,13 +5,12 @@ return {
 		local null_ls = require("null-ls")
 		null_ls.setup({
 			sources = {
-				-- General
-				null_ls.builtins.formatting.prettier,
 
 				-- Lua
 				null_ls.builtins.formatting.stylua,
 
 				-- JS/TS
+				null_ls.builtins.formatting.prettier,
 				require("none-ls.diagnostics.eslint_d"),
 				require("none-ls.formatting.eslint"),
 
@@ -25,6 +24,10 @@ return {
 
 				-- LaTeX
 				require("none-ls.formatting.latexindent"),
+
+				-- Rust
+				require("none-ls.formatting.ruff"),
+				require("none-ls.diagnostics.ruff"),
 			},
 			debug = true,
 		})
