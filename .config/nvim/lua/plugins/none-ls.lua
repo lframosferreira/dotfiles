@@ -18,16 +18,11 @@ return {
 				null_ls.builtins.formatting.clang_format,
 
 				-- Python
-				null_ls.builtins.formatting.isort,
-				null_ls.builtins.formatting.black,
-				require("none-ls.diagnostics.flake8"),
+				require("none-ls.formatting.ruff"),
+				require("none-ls.diagnostics.ruff"),
 
 				-- LaTeX
 				require("none-ls.formatting.latexindent"),
-
-				-- Rust
-				require("none-ls.formatting.ruff"),
-				require("none-ls.diagnostics.ruff"),
 			},
 			debug = true,
 		})
