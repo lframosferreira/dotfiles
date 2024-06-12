@@ -195,7 +195,6 @@ exec_always --no-startup-id /home/lfrf/dotfiles/.config/polybar/launch_polybar.s
 exec_always --no-startup-id feh --bg-scale ~/backgrounds/pokemon.jpg
 exec --no-startup-id "setxkbmap -layout br"
 
-
 # catpuccin colors copied from typecraft config
 
 set $rosewater #f5e0dc
