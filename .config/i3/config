@@ -191,7 +191,7 @@ exec --no-startup-id compton
 # mostly shit from typecraft config video
 exec --no-startup-id picom
 exec_always --no-startup-id killall polybar
-exec_always --no-startup-id /home/lfrf/dotfiles/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id /home/lfrf/.config/polybar/launch_polybar.sh
 exec_always --no-startup-id feh --bg-scale ~/backgrounds/pokemon.jpg
 exec --no-startup-id "setxkbmap -layout br"
 
