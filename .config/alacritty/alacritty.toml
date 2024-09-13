@@ -1,16 +1,14 @@
 import = ["~/dotfiles/.config/alacritty/catppuccin-mocha.toml"]
 
-[env] 
+
+[env]
 TERM = "xterm-256color"
 
 [window]
 padding.x = 10
 padding.y = 10
-
 opacity = 0.9
-
 blur = true
-
 option_as_alt = "Both"
 
 [font]
@@ -25,4 +23,3 @@ primary.background = "#000000"
 [selection]
 
 save_to_clipboard = true
-

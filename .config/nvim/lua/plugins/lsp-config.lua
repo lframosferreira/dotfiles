@@ -11,7 +11,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"tsserver",
+					"ts_ls",
 					"cssls",
 					"rust_analyzer",
 					"clangd",
@@ -29,6 +29,7 @@ return {
 					"yamlls",
 					"ruby_lsp",
 					"zls",
+					"taplo",
 				},
 			})
 		end,
@@ -51,7 +52,7 @@ return {
 			})
 
 			-- typescript
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 
@@ -80,6 +81,11 @@ return {
 
 			-- json
 			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+			})
+
+			-- toml
+			lspconfig.taplo.setup({
 				capabilities = capabilities,
 			})
 
