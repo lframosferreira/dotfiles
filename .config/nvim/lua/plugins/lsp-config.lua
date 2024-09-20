@@ -24,7 +24,6 @@ return {
 					"texlab",
 					"bashls",
 					"pyright",
-					"jsonls",
 					"ruff",
 					"yamlls",
 					"ruby_lsp",
@@ -45,6 +44,7 @@ return {
 			}
 
 			local lspconfig = require("lspconfig")
+
 			-- lua
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -76,11 +76,6 @@ return {
 
 			-- latex
 			lspconfig.texlab.setup({
-				capabilities = capabilities,
-			})
-
-			-- json
-			lspconfig.jsonls.setup({
 				capabilities = capabilities,
 			})
 

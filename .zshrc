@@ -149,3 +149,7 @@ alias vimdiff="nvim -d"
 
 # bun completions
 [ -s "/home/lfrf/.bun/_bun" ] && source "/home/lfrf/.bun/_bun"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# opam configuration
+[[ ! -r /home/lfrf/.opam/opam-init/init.zsh ]] || source /home/lfrf/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

@@ -24,7 +24,7 @@ return {
 				-- LaTeX
 				require("none-ls.formatting.latexindent"),
 			},
-				debug = true,
+			debug = true,
 		})
 		vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, {})
 	end,
