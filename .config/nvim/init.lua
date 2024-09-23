@@ -13,7 +13,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("options")
 require("keymaps")
-require("lazy").setup("plugins")
+require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
+	install = {
+		colorscheme = { "catpuccin" },
+	},
+	checker = {
+		enabled = true,
+		notify = false,
+	},
+	change_detection = { notify = false },
+})
 
 -- transparency added on buf enter. There might be a more elegant solution
 vim.opt.termguicolors = true
