@@ -27,7 +27,6 @@ return {
 					"rust_analyzer",
 					"clangd",
 					"texlab",
-					"pylsp",
 					"julials",
 					"marksman",
 					"zls",
