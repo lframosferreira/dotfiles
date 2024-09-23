@@ -84,7 +84,9 @@ return {
 							-- make the language server recognize "vim" global
 							diagnostics = {
 								globals = { "vim" },
+								disable = { "missing-fields", "incomplete-signature-doc" },
 							},
+							hint = { enable = true },
 							completion = {
 								callSnippet = "Replace",
 							},

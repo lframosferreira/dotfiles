@@ -6,7 +6,7 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				sh = { "shfmt" },
+				bash = { "beautysh" },
 				markdown = { "injected", "markdownlint" },
 				yaml = { "prettier" },
 				typescript = { "prettier" },

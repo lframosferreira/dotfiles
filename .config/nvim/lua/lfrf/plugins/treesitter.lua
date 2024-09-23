@@ -12,6 +12,7 @@ return {
 				"cpp",
 				"make",
 				"lua",
+				"dockerfile",
 				"python",
 				"vim",
 				"vimdoc",
@@ -34,6 +35,15 @@ return {
 				"html",
 				"css",
 				"typst",
+			},
+			incremental_selection = {
+				enable = true,
+				keymaps = {
+					init_selection = "<C-space>",
+					node_incremental = "<C-space>",
+					scope_incremental = false,
+					node_decremental = "<bs>",
+				},
 			},
 		})
 	end,
