@@ -13,12 +13,23 @@ return {
 			python = { "mypy", "ruff" },
 			c = { "clangtidy" },
 			cpp = { "cpplint" },
-			rust = { "clippy" },
+			-- rust = { "clippy" },
 			lua = { "luacheck" },
 			markdown = { "markdownlint" },
 			json = { "jsonlint" },
 		}
 
+		-- to remove warnings in js files
+		lint.linters.eslint_d.args = {
+			"--no-warn-ignored", -- <-- this is the key argument
+			"--format",
+			"json",
+			"--stdin",
+			"--stdin-filename",
+			function()
+				return vim.api.nvim_buf_get_name(0)
+			end,
+		}
 		-- to remove de global vim warning
 		lint.linters.luacheck = {
 			name = "name",

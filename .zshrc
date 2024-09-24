@@ -124,12 +124,6 @@ export PATH=$BUN_INSTALL/bin:$PATH
 # nvim
 export PATH="/home/lfrf/nvim-linux64/bin:$PATH"
 
-# nvm
-[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
-
 # zig
 export PATH="$HOME/zig-linux-x86_64-0.12.0:$PATH"
 
@@ -153,3 +147,6 @@ alias vimdiff="nvim -d"
 
 # opam configuration
 [[ ! -r /home/lfrf/.opam/opam-init/init.zsh ]] || source /home/lfrf/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

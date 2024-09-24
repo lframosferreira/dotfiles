@@ -1,0 +1,3 @@
+1. there is an error with linting in rust, i don't know what
+2. tmux config 
+3. yazi (maybe switch to kitty term)

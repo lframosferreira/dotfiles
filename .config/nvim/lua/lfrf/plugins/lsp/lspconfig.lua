@@ -77,7 +77,7 @@ return {
 			end,
 			["lua_ls"] = function()
 				-- configure lua server (with special settings)
-				lspconfig["lua_ls"].setup({
+				lspconfig.lua_ls.setup({
 					capabilities = capabilities,
 					settings = {
 						Lua = {
@@ -89,6 +89,25 @@ return {
 							hint = { enable = true },
 							completion = {
 								callSnippet = "Replace",
+							},
+						},
+					},
+				})
+			end,
+			["rust_analyzer"] = function()
+				lspconfig.rust_analyzer.setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					filetypes = { "rust" },
+					settings = {
+						check = {
+							enable = true,
+							command = "clippy",
+							features = "all",
+						},
+						["rust-analyzer"] = {
+							cargo = {
+								allFeatures = true,
 							},
 						},
 					},

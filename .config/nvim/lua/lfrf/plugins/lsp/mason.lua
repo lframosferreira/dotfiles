@@ -50,6 +50,9 @@ return {
 					"black",
 					"clang-format",
 					"stylua",
+					"luacheck",
+					"cpplint",
+					"stylua",
 				},
 			})
 		end,
