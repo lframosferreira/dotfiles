@@ -43,4 +43,14 @@ return {
 	{ "numToStr/Comment.nvim", config = true },
 	-- Indentation
 	{ "nmac427/guess-indent.nvim", config = true },
+	-- (f-)Strings
+	{ "axelvc/template-string.nvim", event = "InsertEnter", config = true },
+	-- Surround
+	{ "kylechui/nvim-surround", event = "VeryLazy", config = true },
+
+	----- Language Extensions
+	-- Lua
+	{ "folke/lazydev.nvim", ft = "lua", config = true },
+	-- JSON
+	{ "b0o/schemastore.nvim", lazy = true },
 }

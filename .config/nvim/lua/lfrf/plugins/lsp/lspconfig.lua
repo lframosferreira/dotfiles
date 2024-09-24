@@ -4,7 +4,6 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
@@ -109,6 +108,16 @@ return {
 							cargo = {
 								allFeatures = true,
 							},
+						},
+					},
+				})
+			end,
+			["jsonls"] = function()
+				lspconfig.jsonls.setup({
+					settings = {
+						json = {
+							schemas = require("schemastore").json.schemas(),
+							validate = { enable = true },
 						},
 					},
 				})
