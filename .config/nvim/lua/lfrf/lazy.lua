@@ -19,15 +19,3 @@ require("lazy").setup({ { import = "lfrf.plugins" }, { import = "lfrf.plugins.ls
 	},
 	change_detection = { notify = false },
 })
-
--- transparency added on buf enter. There might be a more elegant solution
-vim.opt.termguicolors = true
-vim.cmd([[
-  highlight Normal guibg=NONE ctermbg=NONE
-  highlight NonText guibg=NONE ctermbg=NONE
-  highlight NeoTreeNormal guibg=NONE ctermbg=NONE
-  highlight NeoTreeNormalNC guibg=NONE ctermbg=NONE
-]])
-
--- lazy and mason windows transparency
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
