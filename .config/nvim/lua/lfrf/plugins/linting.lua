@@ -12,7 +12,7 @@ return {
 			typescript = { "eslint", "eslint_d" },
 			python = { "mypy", "ruff" },
 			c = { "clangtidy" },
-			cpp = { "cpplint" },
+			cpp = { "clangtidy" },
 			-- rust = { "clippy" },
 			lua = { "luacheck" },
 			markdown = { "markdownlint" },
