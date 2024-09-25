@@ -122,6 +122,16 @@ return {
 					},
 				})
 			end,
+			["zls"] = function()
+				lspconfig.zls.setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					cmd = {
+						"zls",
+						"--enable-debug-log",
+					},
+				})
+			end,
 		})
 	end,
 }
