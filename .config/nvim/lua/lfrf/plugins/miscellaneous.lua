@@ -23,6 +23,8 @@ return {
 			vim.g.disable_rainbow_statusline = 1
 		end,
 	},
+	-- dressing
+	{ "stevearc/dressing.nvim" },
 	-- Terminal
 	{
 		"akinsho/toggleterm.nvim",
@@ -32,7 +34,6 @@ return {
 		},
 		keys = { { "<A-t>", "<CMD>ToggleTerm<CR>", desc = "Toggle Terminal", mode = { "n", "t" } } },
 	},
-
 	-- Pairs
 	{
 		"windwp/nvim-autopairs",
@@ -53,4 +54,12 @@ return {
 	{ "folke/lazydev.nvim", ft = "lua", config = true },
 	-- JSON
 	{ "b0o/schemastore.nvim", lazy = true },
+	-- brainfuck
+	{
+		"llathasa-veleth/vim-brainfuck",
+	},
+	-- smt2
+	{
+		"bohlender/vim-smt2",
+	},
 }
