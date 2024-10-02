@@ -36,7 +36,6 @@ return {
 					"pyright",
 					"ruff",
 					"yamlls",
-					"ruby_lsp",
 					"zls",
 					"taplo",
 				},
