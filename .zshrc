@@ -117,15 +117,8 @@ unset __conda_setup
 
 . "$HOME/.cargo/env"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
-
 # nvim
 export PATH="/home/lfrf/nvim-linux64/bin:$PATH"
-
-# zig
-export PATH="$HOME/zig-linux-x86_64-0.12.0:$PATH"
 
 # go
 export PATH="$HOME/usr/local/go:$PATH"
@@ -141,12 +134,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 alias vim="nvim"
 alias vimdiff="nvim -d"
 
-# bun completions
-[ -s "/home/lfrf/.bun/_bun" ] && source "/home/lfrf/.bun/_bun"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# opam configuration
-[[ ! -r /home/lfrf/.opam/opam-init/init.zsh ]] || source /home/lfrf/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# zig
+export PATH="$HOME/zig-linux-x86_64-0.13.0:$PATH"
