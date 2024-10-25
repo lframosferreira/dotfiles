@@ -118,7 +118,7 @@ unset __conda_setup
 . "$HOME/.cargo/env"
 
 # nvim
-export PATH="/home/lfrf/nvim-linux64/bin:$PATH"
+export PATH="$HOME/nvim-linux64/bin:$PATH"
 
 # go
 export PATH="$HOME/usr/local/go:$PATH"
