@@ -1,18 +1,44 @@
-# Set the default background color to dark
-set recolor true
-set recolor-lightcolor "#000000"
-set recolor-darkcolor "#ffffff"
+map i recolor
+set recolor
+set recolor-keephue true
+set adjust-open "window-width"
+set page-padding 1
+set statusbar-v-padding 0
+set statusbar-home-tilde true
+set selection-clipboard clipboard
+set show-recent 0
 
-# Set other UI elements to dark theme
-set statusbar-bg "#000000"
-set statusbar-fg "#ffffff"
-set notification-bg "#000000"
-set notification-fg "#ffffff"
-set completion-bg "#000000"
-set completion-fg "#ffffff"
-set completion-group-bg "#000000"
-set completion-group-fg "#ffffff"
-set inputbar-bg "#000000"
-set inputbar-fg "#ffffff"
-set render-loading-bg "#000000"
-set render-loading-fg "#ffffff"
+# Catppuccin (Darker)
+set default-fg 			    "#d9e0ee"
+set default-bg 			    "#1e1e2e"
+
+set completion-bg		    "#302d41"
+set completion-fg		    "#d9e0ee"
+set completion-highlight-bg	"#575268"
+set completion-highlight-fg	"#d9e0ee"
+set completion-group-bg		"#302d41"
+set completion-group-fg		"#96cdfb"
+
+set statusbar-fg		    "#d9e0ee"
+set statusbar-bg		    "#302d41"
+
+set notification-bg		    "#302d41"
+set notification-fg		    "#d9e0ee"
+set notification-error-bg	"#302d41"
+set notification-error-fg	"#f28fad"
+set notification-warning-bg	"#302d41"
+set notification-warning-fg	"#fae3b0"
+
+set inputbar-fg			    "#d9e0ee"
+set inputbar-bg 		    "#302d41"
+
+set recolor-lightcolor		"#1e1e2e"
+set recolor-darkcolor		"#d9e0ee"
+
+set index-fg			    "#d9e0ee"
+set index-bg			    "#1e1e2e"
+set index-active-fg		    "#d9e0ee"
+set index-active-bg		    "#302d41"
+
+set render-loading-bg		"#1e1e2e"
+set render-loading-fg		"#d9e0ee"
