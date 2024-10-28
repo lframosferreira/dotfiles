@@ -145,3 +145,6 @@ alias cat="batcat"
 
 #deno
 . "/home/lfrf/.deno/env"
+
+# zed
+export PATH=$HOME/.local/bin:$PATH
