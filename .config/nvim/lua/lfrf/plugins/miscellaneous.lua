@@ -13,6 +13,39 @@ return {
 		end,
 		ft = "markdown",
 	},
+	-- Peek
+	{
+		"toppair/peek.nvim",
+		event = { "VeryLazy" },
+		build = "deno task --quiet build:fast",
+		config = function()
+			local peek = require("peek")
+			peek.setup({
+				auto_load = true, -- whether to automatically load preview when
+				-- entering another markdown buffer
+				close_on_bdelete = true, -- close preview window on buffer delete
+
+				syntax = true, -- enable syntax highlighting, affects performance
+
+				theme = 'dark', -- 'dark' or 'light'
+
+				update_on_change = true,
+
+				app = 'firefox', -- 'webview', 'browser', string or a table of strings
+				-- explained below
+
+				filetype = { 'markdown' }, -- list of filetypes to recognize as markdown
+
+				-- relevant if update_on_change is true
+				throttle_at = 200000, -- start throttling when file exceeds this
+				-- amount of bytes in size
+				throttle_time = 'auto', -- minimum amount of time in milliseconds
+				-- that has to pass before starting new render
+			})
+			vim.api.nvim_create_user_command("PeekOpen", peek.open, {});
+			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+		end,
+	},
 	-- CSV
 	{
 		"cameron-wags/rainbow_csv.nvim",
@@ -41,19 +74,19 @@ return {
 		opts = { check_ts = true, ignored_next_char = "" },
 	},
 	-- -- Comments
-	{ "numToStr/Comment.nvim", config = true },
+	{ "numToStr/Comment.nvim",       config = true },
 	-- Indentation
-	{ "nmac427/guess-indent.nvim", config = true },
+	{ "nmac427/guess-indent.nvim",   config = true },
 	-- (f-)Strings
 	{ "axelvc/template-string.nvim", event = "InsertEnter", config = true },
 	-- Surround
-	{ "kylechui/nvim-surround", event = "VeryLazy", config = true },
+	{ "kylechui/nvim-surround",      event = "VeryLazy",    config = true },
 
 	----- Language Extensions
 	-- Lua
-	{ "folke/lazydev.nvim", ft = "lua", config = true },
+	{ "folke/lazydev.nvim",          ft = "lua",            config = true },
 	-- JSON
-	{ "b0o/schemastore.nvim", lazy = true },
+	{ "b0o/schemastore.nvim",        lazy = true },
 	-- brainfuck
 	{
 		"llathasa-veleth/vim-brainfuck",
