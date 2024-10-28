@@ -142,3 +142,6 @@ export PATH="$HOME/zig-linux-x86_64-0.13.0:$PATH"
 
 # support for bat in ubuntu
 alias cat="batcat"
+
+#deno
+. "/home/lfrf/.deno/env"
