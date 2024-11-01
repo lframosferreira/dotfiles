@@ -20,6 +20,7 @@ return {
 				latex = { "latexindent" },
 				zig = { "zigfmt" },
 				toml = { "taplo" },
+				html = { "htmlbeautifier" }
 			},
 			format_on_save = {
 				lsp_fallback = true,
