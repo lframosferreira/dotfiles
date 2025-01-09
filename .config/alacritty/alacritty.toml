@@ -13,7 +13,7 @@ option_as_alt = "Both"
 [font]
 
 normal.family = "JetBrainsMonoNerdFont"
-size = 10
+size = 9
 
 [cursor.style]
 shape = "Block"
