@@ -137,14 +137,13 @@ alias vimdiff="nvim -d"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# zig
-export PATH="$HOME/zig-linux-x86_64-0.13.0:$PATH"
-
 # support for bat in ubuntu
-alias cat="batcat"
+alias cat="bat"
 
 #deno
 . "/home/lfrf/.deno/env"
 
 # zed
 export PATH=$HOME/.local/bin:$PATH
+
+setopt auto_cd no_auto_pushd # prioritize binaries before directories
