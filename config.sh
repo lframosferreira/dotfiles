@@ -2,7 +2,7 @@
 # this config script is only tested for Ubuntu
 
 sudo apt update && sudo apt upgrade -y
-sudo apt git stow install ripgrep feh polybar i3 rofi zathura picom zsh tmux batcat vim -y
+sudo apt git stow install ripgrep feh polybar i3 rofi zathura picom zsh tmux batcat vim python3-venv python3-pip -y
 
 # rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
