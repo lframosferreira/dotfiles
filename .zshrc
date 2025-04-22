@@ -147,3 +147,5 @@ alias cat="bat"
 export PATH=$HOME/.local/bin:$PATH
 
 setopt auto_cd no_auto_pushd # prioritize binaries before directories
+
+export PATH=$PATH:/home/lfram/go/bin/

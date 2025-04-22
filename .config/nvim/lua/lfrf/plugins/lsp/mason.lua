@@ -38,6 +38,7 @@ return {
 					"yamlls",
 					"zls",
 					"taplo",
+					"gopls"
 				},
 				automatic_installation = true,
 			})
