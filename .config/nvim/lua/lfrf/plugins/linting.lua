@@ -17,6 +17,7 @@ return {
 			lua = { "luacheck" },
 			markdown = { "markdownlint" },
 			json = { "jsonlint" },
+			go = { "golangcilint" }
 		}
 
 		-- to remove warnings in js files
