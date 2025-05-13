@@ -68,85 +68,66 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		mason_lspconfig.setup_handlers({
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
-			["lua_ls"] = function()
-				-- configure lua server (with special settings)
-				lspconfig.lua_ls.setup({
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							-- make the language server recognize "vim" global
-							diagnostics = {
-								globals = { "vim" },
-								disable = { "missing-fields", "incomplete-signature-doc" },
-							},
-							hint = { enable = true },
-							completion = {
-								callSnippet = "Replace",
-							},
-						},
+		lspconfig.lua_ls.setup({
+			capabilities = capabilities,
+			settings = {
+				Lua = {
+					-- make the language server recognize "vim" global
+					diagnostics = {
+						globals = { "vim" },
+						disable = { "missing-fields", "incomplete-signature-doc" },
 					},
-				})
-			end,
-			["rust_analyzer"] = function()
-				lspconfig.rust_analyzer.setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-					filetypes = { "rust" },
-					settings = {
-						check = {
-							enable = true,
-							command = "clippy",
-							features = "all",
-						},
-						["rust-analyzer"] = {
-							cargo = {
-								allFeatures = true,
-							},
-						},
+					hint = { enable = true },
+					completion = {
+						callSnippet = "Replace",
 					},
-				})
-			end,
-			["jsonls"] = function()
-				lspconfig.jsonls.setup({
-					settings = {
-						json = {
-							schemas = require("schemastore").json.schemas(),
-							validate = { enable = true },
-						},
+				},
+			},
+		})
+		lspconfig.rust_analyzer.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = { "rust" },
+			settings = {
+				check = {
+					enable = true,
+					command = "clippy",
+					features = "all",
+				},
+				["rust-analyzer"] = {
+					cargo = {
+						allFeatures = true,
 					},
-				})
-			end,
-			["zls"] = function()
-				lspconfig.zls.setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-					cmd = {
-						"zls",
-						"--enable-debug-log",
-					},
-				})
-			end,
-			["gopls"] = function()
-				lspconfig.gopls.setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-					cmd = { "gopls" },
-					filetypes = { "go", "gomod", "gowork", "gotmpl" },
-					root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-					settings = {
-						gopls = {
-							completeUnimported = true,
-							usePlaceholders = true
-						}
-					}
-				})
-			end
+				},
+			},
+		})
+		lspconfig.jsonls.setup({
+			settings = {
+				json = {
+					schemas = require("schemastore").json.schemas(),
+					validate = { enable = true },
+				},
+			},
+		})
+		lspconfig.zls.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			cmd = {
+				"zls",
+				"--enable-debug-log",
+			},
+		})
+		lspconfig.gopls.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			cmd = { "gopls" },
+			filetypes = { "go", "gomod", "gowork", "gotmpl" },
+			settings = {
+				gopls = {
+					completeUnimported = true,
+					usePlaceholders = true
+				}
+			}
 		})
 	end,
 }

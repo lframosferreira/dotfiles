@@ -51,6 +51,15 @@ return {
 			}),
 		}
 
+		-- to prevent exit code 5
+		lint.linters.golangcilint.args = {
+			"run",
+			"--output.json.path=stdout",
+			"--show-stats=false",
+			"--issues-exit-code",
+			"0",
+		}
+
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 			group = lint_augroup,
